@@ -1,0 +1,100 @@
+*, ::after, ::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin: 0;
+    background-color: #87CEEB;
+}
+
+.button-container {
+    display: none;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.button-container.active {
+    display: block;
+}
+
+.click-me {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 80px;
+    cursor: pointer;
+    border: 4px solid #fff;
+    background-color: #87CEEB;
+    color: #fff;
+    font-size: 24px;
+    transition: all 0.5s;
+}
+
+.day-container {
+    width: 100%;
+    height: 100vh;
+    display: none;
+    padding: 20px;
+}
+
+.day-container.active {
+    display: block;
+}
+
+.click-me:hover {
+    background-color: #fff;
+    color: #87CEEB;
+}
+
+.content-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 24px;
+}
+
+.content-container > h1 {
+    font-size: 48px;
+}
+
+.sunflower {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#girasolCanvas {
+    display: block;
+    width: 300px;
+    height: 600px;
+}
+
+@media (max-width: 900px) {
+    .day-container {
+        padding: 10px;
+    }
+
+    .content-container {
+        font-size: 14px;
+    }
+    
+    .content-container > h1 {
+        font-size: 20px;
+    }
+}
